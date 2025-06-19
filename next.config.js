@@ -9,7 +9,7 @@ const nextConfig = {
   },
   output: 'export', // Enable static export
   trailingSlash: true, // Required for GitHub Pages
-  basePath: process.env.NODE_ENV === 'production' ? '/brando' : '', // Replace 'brando' with your repo name
+  basePath: process.env.NODE_ENV === 'production' ? '/Brandons-Audio' : '', // Replace 'brando' with your repo name
 }
 
 module.exports = nextConfig 
