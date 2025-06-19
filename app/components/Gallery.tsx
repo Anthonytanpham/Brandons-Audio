@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 
@@ -117,11 +118,13 @@ const Gallery = () => {
               className="relative group cursor-pointer overflow-hidden rounded-lg"
               onClick={() => openLightbox(index)}
             >
-              <div className="aspect-w-16 aspect-h-12 bg-gray-800">
-                <img
+              <div className="bg-gray-800 relative h-64">
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 
                 {/* Overlay */}
@@ -159,9 +162,11 @@ const Gallery = () => {
               className="relative max-w-4xl max-h-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
+              <Image
                 src={galleryImages[selectedImage].src}
                 alt={galleryImages[selectedImage].alt}
+                width={1200}
+                height={800}
                 className="w-full h-auto max-h-[80vh] object-contain rounded-lg"
               />
               
