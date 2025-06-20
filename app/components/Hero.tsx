@@ -101,7 +101,7 @@ const Hero = () => {
 
           {/* Features */}
           <motion.div 
-            className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
+            className="mt-16 mb-20 md:mb-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.4 }}
@@ -130,16 +130,16 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
+      <div className="absolute bottom-6 md:bottom-12 left-1/2 transform -translate-x-1/2 z-20 flex flex-col items-center">
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="flex flex-col items-center"
         >
           <div className="w-6 h-10 border-2 border-primary-red rounded-full flex justify-center relative">
             <motion.div
               className="w-1 h-3 bg-primary-red rounded-full absolute top-2"
-              animate={{ y: [0, 12, 0] }}
+              animate={{ y: [0, 8, 0] }}
               transition={{ duration: 2, repeat: Infinity }}
             />
           </div>
