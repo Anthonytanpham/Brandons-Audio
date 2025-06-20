@@ -54,7 +54,7 @@ const Footer = () => {
           >
             <div className="mb-4">
               <Image
-                src="/brandon-transparent-logo.png"
+                src="/transparent.png"
                 alt="Brandon's Auto Sound Logo"
                 width={240}
                 height={50}

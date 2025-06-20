@@ -50,7 +50,7 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/brandon-transparent-logo.png"
+              src="/transparent.png"
               alt="Brandon's Auto Sound Logo"
               width={280}
               height={60}
