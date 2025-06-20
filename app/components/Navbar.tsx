@@ -50,15 +50,12 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/brandon nav logo.png"
+              src="/brandon-transparent-logo.png"
               alt="Brandon's Auto Sound Logo"
               width={280}
               height={60}
-              className="h-12 w-auto mix-blend-screen"
+              className="h-12 w-auto"
               priority
-              style={{
-                filter: 'contrast(1.1) brightness(1.1)'
-              }}
             />
           </motion.div>
 

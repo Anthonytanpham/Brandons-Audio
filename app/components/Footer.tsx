@@ -54,14 +54,11 @@ const Footer = () => {
           >
             <div className="mb-4">
               <Image
-                src="/brandon nav logo.png"
+                src="/brandon-transparent-logo.png"
                 alt="Brandon's Auto Sound Logo"
                 width={240}
                 height={50}
-                className="h-8 w-auto mix-blend-screen"
-                style={{
-                  filter: 'contrast(1.1) brightness(1.1)'
-                }}
+                className="h-8 w-auto"
               />
             </div>
             <p className="text-primary-silver mb-6 leading-relaxed">
