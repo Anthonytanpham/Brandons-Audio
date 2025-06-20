@@ -1,7 +1,6 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
@@ -52,14 +51,45 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="mb-4">
-              <Image
-                src="/brandons-logo.png"
-                alt="Brandon's Auto Sound Logo"
-                width={240}
-                height={50}
-                className="h-10 w-auto"
-              />
+            <div className="flex items-center space-x-3 mb-4">
+              {/* Car Icon with Audio Bars */}
+              <div className="relative">
+                <div className="flex items-center space-x-1">
+                  {/* Audio Visualizer Bars */}
+                  <div className="flex items-end space-x-1 mr-2">
+                    {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, index) => (
+                      <motion.div
+                        key={index}
+                        className="bg-primary-red rounded-sm"
+                        style={{ width: '2px', height: `${height * 2}px` }}
+                        animate={{ 
+                          height: [`${height * 2}px`, `${height * 4}px`, `${height * 2}px`]
+                        }}
+                        transition={{ 
+                          duration: 1.5,
+                          repeat: Infinity,
+                          delay: index * 0.1
+                        }}
+                      />
+                    ))}
+                  </div>
+                  {/* Car Silhouette */}
+                  <svg className="w-6 h-4 text-white" viewBox="0 0 32 20" fill="currentColor">
+                    <path d="M4 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm24 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm2-6H2l2-4h24l2 4zm-4 2v6H6V8h20z"/>
+                    <circle cx="7" cy="14" r="1.5" className="fill-primary-red"/>
+                    <circle cx="25" cy="14" r="1.5" className="fill-primary-red"/>
+                  </svg>
+                </div>
+              </div>
+              {/* Text Logo */}
+              <div>
+                <h3 className="text-xl font-display font-black text-white leading-none">
+                  BRANDON'S
+                </h3>
+                <h4 className="text-lg font-display font-bold text-primary-red leading-none -mt-1">
+                  AUTO SOUND
+                </h4>
+              </div>
             </div>
             <p className="text-primary-silver mb-6 leading-relaxed">
               Utah's premier car audio and video installation specialists. 
