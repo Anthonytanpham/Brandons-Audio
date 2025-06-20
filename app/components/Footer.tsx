@@ -73,7 +73,7 @@ const Footer = () => {
               </div>
               {/* Your Logo */}
               <Image
-                src="/brandons-logo.png"
+                src="/brandon nav logo.png"
                 alt="Brandon's Auto Sound Logo"
                 width={240}
                 height={50}
