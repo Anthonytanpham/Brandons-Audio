@@ -46,35 +46,19 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <motion.div 
-            className="flex items-center space-x-3"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            {/* Audio Visualizer Bars */}
-            <div className="flex items-end space-x-1">
-              {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-primary-red rounded-sm"
-                  style={{ width: '2px', height: `${height * 3}px` }}
-                  animate={{ 
-                    height: [`${height * 3}px`, `${height * 5}px`, `${height * 3}px`]
-                  }}
-                  transition={{ 
-                    duration: 1.5,
-                    repeat: Infinity,
-                    delay: index * 0.1
-                  }}
-                />
-              ))}
-            </div>
-            {/* Your Logo */}
             <Image
               src="/brandon nav logo.png"
               alt="Brandon's Auto Sound Logo"
               width={280}
               height={60}
-              className="h-12 w-auto"
+              className="h-12 w-auto mix-blend-screen"
               priority
+              style={{
+                filter: 'contrast(1.1) brightness(1.1)'
+              }}
             />
           </motion.div>
 

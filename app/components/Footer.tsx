@@ -52,32 +52,16 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <div className="flex items-center space-x-3 mb-4">
-              {/* Audio Visualizer Bars */}
-              <div className="flex items-end space-x-1">
-                {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-primary-red rounded-sm"
-                    style={{ width: '2px', height: `${height * 2}px` }}
-                    animate={{ 
-                      height: [`${height * 2}px`, `${height * 4}px`, `${height * 2}px`]
-                    }}
-                    transition={{ 
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: index * 0.1
-                    }}
-                  />
-                ))}
-              </div>
-              {/* Your Logo */}
+            <div className="mb-4">
               <Image
                 src="/brandon nav logo.png"
                 alt="Brandon's Auto Sound Logo"
                 width={240}
                 height={50}
-                className="h-8 w-auto"
+                className="h-8 w-auto mix-blend-screen"
+                style={{
+                  filter: 'contrast(1.1) brightness(1.1)'
+                }}
               />
             </div>
             <p className="text-primary-silver mb-6 leading-relaxed">
