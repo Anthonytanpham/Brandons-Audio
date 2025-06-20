@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
@@ -48,44 +49,33 @@ const Navbar = () => {
             className="flex items-center space-x-3"
             whileHover={{ scale: 1.05 }}
           >
-            {/* Car Icon with Audio Bars */}
-            <div className="relative">
-              <div className="flex items-center space-x-1">
-                {/* Audio Visualizer Bars */}
-                <div className="flex items-end space-x-1 mr-2">
-                  {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-primary-red rounded-sm"
-                      style={{ width: '2px', height: `${height * 3}px` }}
-                      animate={{ 
-                        height: [`${height * 3}px`, `${height * 5}px`, `${height * 3}px`]
-                      }}
-                      transition={{ 
-                        duration: 1.5,
-                        repeat: Infinity,
-                        delay: index * 0.1
-                      }}
-                    />
-                  ))}
-                </div>
-                {/* Car Silhouette */}
-                <svg className="w-8 h-5 text-white" viewBox="0 0 32 20" fill="currentColor">
-                  <path d="M4 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm24 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm2-6H2l2-4h24l2 4zm-4 2v6H6V8h20z"/>
-                  <circle cx="7" cy="14" r="1.5" className="fill-primary-red"/>
-                  <circle cx="25" cy="14" r="1.5" className="fill-primary-red"/>
-                </svg>
-              </div>
+            {/* Audio Visualizer Bars */}
+            <div className="flex items-end space-x-1">
+              {[1, 2, 3, 4, 5, 4, 3, 2, 1].map((height, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-primary-red rounded-sm"
+                  style={{ width: '2px', height: `${height * 3}px` }}
+                  animate={{ 
+                    height: [`${height * 3}px`, `${height * 5}px`, `${height * 3}px`]
+                  }}
+                  transition={{ 
+                    duration: 1.5,
+                    repeat: Infinity,
+                    delay: index * 0.1
+                  }}
+                />
+              ))}
             </div>
-            {/* Text Logo */}
-            <div>
-              <h1 className="text-xl md:text-2xl font-display font-black text-white leading-none">
-                BRANDON'S
-              </h1>
-              <h2 className="text-lg md:text-xl font-display font-bold text-primary-red leading-none -mt-1">
-                AUTO SOUND
-              </h2>
-            </div>
+            {/* Your Logo */}
+            <Image
+              src="/brandons-logo.png"
+              alt="Brandon's Auto Sound Logo"
+              width={280}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Menu */}
