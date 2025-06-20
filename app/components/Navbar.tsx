@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
@@ -48,9 +49,14 @@ const Navbar = () => {
             className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            <h1 className="text-2xl font-display font-bold text-white">
-              BRANDON'S <span className="text-primary-red">AUTO SOUND</span>
-            </h1>
+            <Image
+              src="/brandons-logo.png"
+              alt="Brandon's Auto Sound Logo"
+              width={280}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Menu */}

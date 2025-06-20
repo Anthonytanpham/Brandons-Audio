@@ -1,6 +1,7 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
@@ -51,9 +52,15 @@ const Footer = () => {
             viewport={{ once: true }}
             className="lg:col-span-1"
           >
-            <h3 className="text-2xl font-display font-bold text-white mb-4">
-              BRANDON'S <span className="text-primary-red">AUTO SOUND</span>
-            </h3>
+            <div className="mb-4">
+              <Image
+                src="/brandons-logo.png"
+                alt="Brandon's Auto Sound Logo"
+                width={240}
+                height={50}
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="text-primary-silver mb-6 leading-relaxed">
               Utah's premier car audio and video installation specialists. 
               Driven by passion, powered by expertise.
