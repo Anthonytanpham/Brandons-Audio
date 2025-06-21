@@ -66,7 +66,7 @@ const Footer = () => {
               Driven by passion, powered by expertise.
             </p>
             <div className="text-primary-silver">
-              <p className="mb-2">📞 (801) 555-0123</p>
+                              <p className="mb-2">📞 (385) 209-4391</p>
               <p className="mb-2">✉️ info@brandonsautosound.com</p>
               <p>📍 Salt Lake City, UT</p>
             </div>

@@ -43,10 +43,10 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: <Phone size={24} />,
-      title: 'PHONE',
-      details: '(801) 555-0123',
-      link: 'tel:+18015550123'
+                  icon: <Phone size={24} />,
+            title: 'PHONE',
+            details: '(385) 209-4391',
+            link: 'tel:+13852094391'
     },
     {
       icon: <Mail size={24} />,
